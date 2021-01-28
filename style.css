@@ -1,0 +1,149 @@
+body {
+	background-color: rgb(155, 189, 235);
+	font-family: 'Press Start 2P', cursive;
+}
+
+h6 {
+	font-size: .5em;
+}
+
+input {
+	background-color: rgb(223, 105, 105);
+	color: white;
+	border-radius: 10px;
+	border: none;
+}
+
+button {
+	background-color: rgb(223, 105, 105);
+	color: white;
+	border-radius: 10px;
+	border: none;
+}
+
+.flexbox-container-1 {
+	display: flex;
+	flex-wrap: initial;
+	margin: 0 auto;
+	width: 40%;
+	justify-content: space-around;
+	align-items: center;
+	height: 40px;
+}
+.flexbox-container-3 {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+}
+
+.flexbox-container-2 {
+	display: flex;
+	width: 60%;
+	justify-content: center;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
+}
+#score,
+#getScores {
+	font-size: .5em;
+	background-color: rgb(223, 105, 105);
+	color: white;
+	border-radius: 10px;
+	text-align: center;
+
+	padding: 20px 0px;
+	width: 100px;
+}
+.flexbox-item {
+	padding: 0 0;
+	height: 80px;
+}
+
+.flexbox-item-game {
+	width: 80%;
+	justify-content: center;
+}
+#game {
+	justify-content: center;
+}
+
+#game .main {
+	width: 17%;
+	height: 150px;
+	margin: 10px;
+	display: inline-block;
+	perspective: 1000px;
+}
+
+#game .card {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: all .6s ease;
+}
+
+#game .card.flip {
+	transform: rotateY(180deg);
+}
+
+#game .front {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	background-image:url("https://news.artnet.com/app/news-upload/2017/01/We-the-People-17x30-01-1-580x1024.jpg");
+  background-position: 0px -0px;
+	background-size: cover;
+  border-radius: 20px;
+}
+
+.red,
+.blue,
+.green,
+.orange,
+.purple {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	background-color: green;
+	transform: rotateY(180deg);
+	border-radius: 20px;
+}
+
+.red {
+	background-image: url("https://cdn-japantimes.com/wp-content/uploads/2021/01/np_file_64727.jpeg");
+	background-position: 200px -20px;
+	background-size: cover;
+}
+
+.blue {
+	/* background-color:blue; */
+	background-image: url("https://img.buzzfeed.com/buzzfeed-static/static/2021-01/22/3/asset/0308066dc00f/sub-buzz-22353-1611286579-3.jpg");
+	background-position: 176px -8px;
+	background-size: cover;
+}
+
+.green {
+	/* background-color:green; */
+	background-image: url("https://www.usmagazine.com/wp-content/uploads/2021/01/Dr-Jill-Biden-Custom-Made-Markarian-Ensemble-For-The-Inauguration-Has-A-Special-Message-Promo.jpg");
+	background-position: 160px -8px;
+	background-size: cover;
+}
+
+.orange {
+	/* background-color:orange; */
+	background-image: url("https://cdn.vox-cdn.com/thumbor/JOnrGQYduXnNQmWtwji5gWVXpCU=/0x0:3000x2471/1200x800/filters:focal(1213x931:1693x1411)/cdn.vox-cdn.com/uploads/chorus_image/image/68695265/GettyImages_1230690784.0.jpg");
+	background-position: 210px -10px;
+	background-size: cover;
+}
+
+.purple {
+	/* background-color:purple; */
+	background-image: url("https://www.etonline.com/sites/default/files/styles/970xh/public/images/2021-01/michelle_obama_at_biden_inauguration_2_gettyimages-1297441985.jpg?itok=ABftw-Gm");
+	background-position: 220px 0px;
+	background-size: cover;
+}
