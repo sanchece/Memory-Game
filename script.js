@@ -5,16 +5,15 @@ let playerName = '';
 saveName.addEventListener('submit', function(e) {
 	e.preventDefault();
 	playerName = document.querySelector('#nombre').value;
-
 	console.log(playerName);
 });
 
-// memory pair cards to be shuffled
+// pairs of memory cards 
 const COLORS = [ 'red', 'blue', 'green', 'orange', 'purple', 'red', 'blue', 'green', 'orange', 'purple' ];
 
-// shuffles COLORS array 
+// shuffles memory cards
 function shuffle(array) {
-	// explain algorithm 
+	// this is the "Fisher-Yates shuffle"
 	let counter = array.length;
 	while (counter > 0) {
 		let index = Math.floor(Math.random() * counter);
