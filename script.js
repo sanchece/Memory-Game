@@ -2,6 +2,7 @@ const gameContainer = document.getElementById('game');
 const bestAttempts = JSON.parse(localStorage.getItem('bestAttempts')) || [];
 const saveName = document.querySelector('#save');
 let playerName = '';
+
 saveName.addEventListener('submit', function(e) {
 	e.preventDefault();
 	playerName = document.querySelector('#nombre').value;
