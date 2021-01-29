@@ -1,152 +1,177 @@
 body {
-	background-color: rgb(155, 189, 235);
-	font-family: 'Press Start 2P', cursive;
-}
-
-h6 {
-	font-size: .5em;
-}
-
-input {
-	background-color: rgb(223, 105, 105);
+	background-color: rgb(255, 74, 50);
 	color: white;
-	border-radius: 10px;
-	border: none;
 }
-
-button {
-	background-color: rgb(223, 105, 105);
-	color: white;
-	border-radius: 10px;
-	border: none;
-}
-
-.flexbox-container-1 {
+#flex-box {
 	display: flex;
-	flex-wrap: initial;
-	margin: 0 auto;
-	width: 40%;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
-	height: 40px;
-}
-.flexbox-container-3 {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	align-items: center;
-}
+	align-content: space-between;
 
-.flexbox-container-2 {
-	display: flex;
-	width: 60%;
-	justify-content: center;
-	justify-content: space-around;
-	align-items: center;
-	margin: 0 auto;
-}
-#score,
-#getScores {
-	font-size: .5em;
-	background-color: rgb(223, 105, 105);
-	color: white;
-	border-radius: 10px;
-	text-align: center;
-
-	padding: 20px 0px;
-	width: 100px;
-}
-.flexbox-item {
-	padding: 0 0;
-	height: 80px;
-}
-
-.flexbox-item-game {
 	width: 80%;
-	justify-content: center;
-}
-#game {
-	justify-content: center;
+	margin: 0 auto;
+	/* background-color:rgb(5, 6, 7); */
 }
 
-#game .main {
-	width: 17%;
-	height: 150px;
-	margin: 10px;
+p {
+	transform: rotateX(40deg);
+	line-height: 0.75;
+}
+#title {
+	width: 100%;
+	padding-top: 6em;
+	padding-bottom: .2em;
+	text-align: center;
+	/* background-color:tomato; */
+	font-size: 2rem;
+	font-family: 'Press Start 2P', cursive;
+	perspective: 500px;
+}
+.hidden {
+	visibility: hidden;
+	height: 20px;
+}
+
+#theme {
+	width: 100%;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: center;
+	/* background-color: wheat; */
+
+	font-size: .6rem;
+	font-family: 'Press Start 2P', cursive;
+	perspective: 800px;
+}
+#start-form {
+	width: 100%;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: center;
+	/* background-color:yellow; */
+	font-size: .6rem;
+	font-family: 'Press Start 2P', cursive;
+	perspective: 800px;
+}
+
+#game {
+	/* background-color: lightseagreen; */
+	width: 50%;
+	/* height:80%; */
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.time {
+	width: 50%;
+	display: inline-block;
+	text-align: center;
+}
+.score {
+	width: 50%;
+	display: inline-block;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.card-container {
+	height: 140px;
+	width: 20%;
+	margin: 8px;
 	display: inline-block;
 	perspective: 1000px;
+	border: none;
+	background-color: transparent;
+}
+@media (max-width: 992px) {
+	#game {
+		width: 90%;
+	}
+	.card-container {
+		height: 120px;
+		width: 25%;
+	}
+}
+.card-container:hover {
+	cursor: pointer;
 }
 
-#game .card {
+.card {
 	position: relative;
 	width: 100%;
 	height: 100%;
 	transform-style: preserve-3d;
-	transition: all .6s ease;
+	transition: transform 1s;
+	border: none;
+	background-color: transparent;
 }
 
-#game .card.flip {
+.card.flip {
 	transform: rotateY(180deg);
 }
 
-#game .front {
+.front {
+	border-radius: 15px;
+	border: none;
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	backface-visibility: hidden;
-	/* background-image:url("https://news.artnet.com/app/news-upload/2017/01/We-the-People-17x30-01-1-580x1024.jpg"); */
-  background-position: 0px -0px;
+	/* background-color:black; */
+
+	background-image: url("https://i.redd.it/kjvdc916y6051.jpg");
+	background-position: center;
 	background-size: cover;
-  border-radius: 20px;
-  background-color:black;
 
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
 }
-
-.red,
-.blue,
-.green,
-.orange,
-.purple {
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
+	border-radius: 15px;
+	border: none;
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	backface-visibility: hidden;
-	background-color: green;
 	transform: rotateY(180deg);
-	border-radius: 20px;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
 }
 
-.red {
-	/* background-image: url("https://cdn-japantimes.com/wp-content/uploads/2021/01/np_file_64727.jpeg"); */
-	background-position: 200px -20px;
-	background-size: cover;
-	background-color: red;
-}
-
-.blue {
-	background-color:blue;
-	/* backgrokund-image: url("https://img.buzzfeed.com/buzzfeed-static/static/2021-01/22/3/asset/0308066dc00f/sub-buzz-22353-1611286579-3.jpg"); */
-	background-position: 176px -8px;
+.card1 {
+	background-image: url("https://res-5.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/xefratv6r06jgmdyywpc");
+	background-position: center;
 	background-size: cover;
 }
-
-.green {
-	background-color:green;
-	/* background-image: url("https://www.usmagazine.com/wp-content/uploads/2021/01/Dr-Jill-Biden-Custom-Made-Markarian-Ensemble-For-The-Inauguration-Has-A-Special-Message-Promo.jpg"); */
-	background-position: 160px -8px;
+.card2 {
+	background-image: url("https://investorjunkie.com/wp-content/uploads/2020/04/webull770x770.jpg");
+	background-position: center;
 	background-size: cover;
 }
-
-.orange {
-	background-color:orange;
-	/* background-image: url("https://cdn.vox-cdn.com/thumbor/JOnrGQYduXnNQmWtwji5gWVXpCU=/0x0:3000x2471/1200x800/filters:focal(1213x931:1693x1411)/cdn.vox-cdn.com/uploads/chorus_image/image/68695265/GettyImages_1230690784.0.jpg"); */
-	background-position: 210px -10px;
+.card3 {
+	background-image: url("https://townsquare.media/site/838/files/2020/06/redditlogo.jpg?w=980&q=75");
+	background-position: center;
 	background-size: cover;
 }
-
-.purple {
-	background-color:purple;
-	/* background-image: url("https://www.etonline.com/sites/default/files/styles/970xh/public/images/2021-01/michelle_obama_at_biden_inauguration_2_gettyimages-1297441985.jpg?itok=ABftw-Gm"); */
-	background-position: 220px 0px;
+.card4 {
+	background-image: url("https://alumni.virginia.edu/new-york/wp-content/uploads/sites/29/2014/04/wall-street-website-image.jpg");
+	background-position: center;
+	background-size: cover;
+}
+.card5 {
+	background-image: url("https://www.anbmedia.com/wp/wp-content/uploads/2019/03/gamestop-logo-1024x780.jpg");
+	background-position: center;
+	background-size: cover;
+}
+.card6 {
+	background-image: url("https://amc-theatres-res.cloudinary.com/image/upload/v1591383179/amc-cdn/general/reopening/2020Reopening_6.9Promo_rev2.jpg");
+	background-position: center;
 	background-size: cover;
 }

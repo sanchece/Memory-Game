@@ -1,49 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <title>Memory Game!</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="flexbox-container-1">
-    <div class="flexbox-item">
-      <h1>Memory Game!</h1>
+    <div id="flex-box">
+        <div id="title">
+            <p>Memory</p>
+            <p>Game!</p>
+        </div>
+        <div id="theme">
+            <p>r/wallstreetbets theme</p>
+        </div>
+        <form id="start-form">
+            <p>
+                <input id="name" type="text" placeholder="what do you go by?">
+                <button id="start-button"> start</button>
+            </p>
+        </form>
     </div>
-  </div>
-  <div class="flexbox-container-1">
-    <div class="flexbox-item">
-      <h6>(2021 inauguration themed) created by carlos</h6>
+    <div id="game">
+
     </div>
-  </div>
-  <form id="save">
-    <div class="flexbox-container-2">
-      <input id="nombre" type="text" placeholder="type your name here">
-      <button>save name</button>
+    <script src="script.js"></script>
 
-
-      <div id="score">time<div id="timer">0</div>
-      </div>
-      <div id="score">attempts<div id="attempts">0</div>
-      </div>
-      <div id="getScores">Check high scores</div>
-    </div>
-  </form>
-  <br><br>
-  <div class="flexbox-container-3">
-    <div class="flexbox-item-game">
-      <div id="game">
-
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 
 </html>
