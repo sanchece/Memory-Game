@@ -69,12 +69,14 @@ p {
 	width: 50%;
 	display: inline-block;
 	text-align: center;
+padding-bottom: 20px;
 }
 .score {
 	width: 50%;
 	display: inline-block;
 	text-align: center;
-	padding-bottom: 20px;
+	
+	
 }
 .card-container {
 	height: 140px;
